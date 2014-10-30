@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fc="http://schemas.android.com/apk/res/com.fatcowfeng.android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fatcowfeng.android.MainActivity" >
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.fatcowfeng.android.scrollrelatelayout.ScrollRelativeLayout
+        android:id="@+id/head"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        fc:limitheight="20dp" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FF878787"
+            android:text="HEAD" />
+    </com.fatcowfeng.android.scrollrelatelayout.ScrollRelativeLayout>
+
+</RelativeLayout>
