@@ -13,13 +13,14 @@
     <com.fatcowfeng.android.scrollrelatelayout.ScrollRelativeLayout
         android:id="@+id/head"
         android:layout_width="fill_parent"
-        android:layout_height="60dp"
+        android:layout_height="300dp"
         android:layout_alignParentTop="true"
-        fc:limitheight="20dp" >
+        fc:limitheight="250dp" >
 
-        <TextView
+        <com.fatcowfeng.android.scrollrelatelayout.ScrollLayoutView
+            android:id="@+id/head_text"
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_height="300dp"
             android:layout_alignParentBottom="true"
             android:background="#FF878787"
             android:text="HEAD" />

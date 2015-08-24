@@ -10,8 +10,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -26,8 +28,22 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         headLayOut = (ScrollRelativeLayout) findViewById(R.id.head);
+        View text = headLayOut.findViewById(R.id.head_text);
+        if (text != null) {
+            text.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "text", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
         list = (ListView) findViewById(R.id.list);
         scrollListener = new HeadScrollListener(headLayOut);
+        View v = new View(this);
+        LayoutParams lp = new LayoutParams(LayoutParams.FILL_PARENT, (int) getResources()
+                .getDisplayMetrics().density * 300);
+        v.setLayoutParams(lp);
+        list.addHeaderView(v);
         list.setOnScrollListener(scrollListener);
         list.setAdapter(new BaseAdapter() {
 

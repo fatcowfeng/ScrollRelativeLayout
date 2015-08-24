@@ -6,6 +6,7 @@ import com.fatcowfeng.android.R;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Scroller;
@@ -84,6 +85,11 @@ public class ScrollRelativeLayout extends RelativeLayout {
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        return false;
     }
 
     public void setListViewPositon(ListView mListview) {
