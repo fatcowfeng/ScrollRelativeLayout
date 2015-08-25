@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScrollRelativeLayout">
+        <attr name="limitheight" format="reference|dimension" />
+    </declare-styleable>
+</resources>

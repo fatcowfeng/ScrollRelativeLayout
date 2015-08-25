@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fatcowfeng.android.MainActivity" >
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.fatcowfeng.android.scrollrelativelayout.ScrollRelativeLayout
+        android:id="@+id/head"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        fc:limitheight="250dp" >
+
+        <com.fatcowfeng.android.scrollrelativelayout.ScrollLayoutView
+            android:id="@+id/head_text"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FF878787"
+            android:text="HEAD" />
+    </com.fatcowfeng.android.scrollrelativelayout.ScrollRelativeLayout>
+
+</RelativeLayout>
